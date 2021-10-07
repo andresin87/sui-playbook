@@ -2,16 +2,12 @@ const sites = {
   desktop: {
     locales: {
       es: {
-        title: "El portal Escritorio",
+        title: "con este manual",
         description: "esta es la descripción del portal de Escritorio.",
       },
       en: {
-        title: "The Desktop Site",
-        description: "This is the description for the first site.",
-      },
-      se: {
-        title: "Den första webbplatsen",
-        description: "Det här är beskrivningen för den första webbplatsen.",
+        title: "with this playbook",
+        description: "This is the description for the Desktop site.",
       },
     },
     domain: "sui-playbook.d.vercel.app",
@@ -19,16 +15,12 @@ const sites = {
   mobile: {
     locales: {
       es: {
-        title: "El portal Móbil",
+        title: "con este manual",
         description: "esta es la descripción del portal de Móbil.",
       },
       en: {
-        title: "The Mobile Site",
-        description: "This is the description for the second site.",
-      },
-      se: {
-        title: "Den andra webbplatsen",
-        description: "Det här är beskrivningen för den andra webbplatsen.",
+        title: "with this playbook",
+        description: "This is the description for the Mobile site.",
       },
     },
     domain: "sui-playbook.m.vercel.app",
@@ -36,16 +28,12 @@ const sites = {
   tv: {
     locales: {
       es: {
-        title: "El portal TV",
+        title: "con este manual",
         description: "esta es la descripción del portal de TV.",
       },
       en: {
-        title: "The TV Site",
-        description: "This is the description for the second site.",
-      },
-      se: {
-        title: "Den andra webbplatsen",
-        description: "Det här är beskrivningen för den andra webbplatsen.",
+        title: "with this playbook",
+        description: "This is the description for the TV site.",
       },
     },
     domain: "sui-playbook.tv.vercel.app",

@@ -27,11 +27,13 @@ module.exports = {
   },
 
   // Redirect / to default pseudoLocale
-  redirects: () => [
-    {
-      source: "/",
-      destination: `/${Object.keys(sites)[0]}/${pseudoLocales[0]}`,
-      permanent: true,
-    },
-  ],
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: `/${pseudoLocales[0]}`,
+        permanent: true,
+      },
+    ];
+  },
 };

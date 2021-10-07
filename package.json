@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "sui-playbook",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,16 +10,17 @@
     "clear": "rm -rf ./.next/cache"
   },
   "dependencies": {
-    "@s-ui/theme": "^8.105.0",
+    "@s-ui/theme": ">=8",
+    "figma-api": "^1.7.0",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-json-tree": "^0.15.0",
-    "sass": "^1.42.1"
+    "react-json-tree": ">=0",
+    "sass": ">=1"
   },
   "devDependencies": {
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
-    "prettier": "^2.4.1"
+    "prettier": ">=2"
   }
 }

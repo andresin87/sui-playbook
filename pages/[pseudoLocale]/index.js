@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import { useRouter } from "next/router";
 import getConfig from "next/config";
+
 import JSONTree from "react-json-tree";
 
 import styles from "../../styles/Home.module.css";
@@ -23,7 +24,7 @@ export default function Home({ pseudoLocale }) {
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          [LOOP] <a href="https://nextjs.org">Adevinta!</a>
         </h1>
         <h1 className={styles.title}>
           {siteAndLocale
@@ -49,6 +50,26 @@ export default function Home({ pseudoLocale }) {
   );
 }
 
+export async function getServerSideProps({
+  params,
+  req,
+  res,
+  query,
+  locale,
+  locales,
+  defaultLocale,
+}) {
+  const { pseudoLocale = "es" } = params
+  console.log({ params, req, res, query, locale, locales, defaultLocale });
+  return {
+    // redirect: {
+    //   destination: `/`,
+    //   permanent: false,
+    // },
+    props: { pseudoLocale },
+  };
+}
+
 // export async function getStaticProps({
 //   params: { pseudoLocale = "es" },
 //   locale = "desktop",
@@ -60,10 +81,19 @@ export default function Home({ pseudoLocale }) {
 //     revalidate: 60, // Seconds. This refresh time could be longer depending on how often data changes.
 //   };
 // }
-
-// export async function getStaticPaths({ locales }) {
+//
+// export async function getStaticPaths({locale}) {
 //   return {
-//     paths: [{ params: { pseudoLocale: "es" }, locale: "desktop" }],
+//     paths: [
+//       {
+//         params: { pseudoLocale: "es" },
+//         locale: "desktop"
+//       },
+//       {
+//         params: { pseudoLocale: "en" },
+//         locale: "desktop"
+//       }
+//     ],
 //     fallback: true, // true -> build page if missing, false -> serve 404
 //   };
 // }
